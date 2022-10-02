@@ -1,0 +1,249 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FBLA Game
+</name>
+</assembly>
+<members>
+<member name="T:FBLA_Game.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.barrel2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.cheset">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.chest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.dungeon_lvl_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.dungeon_lvl_3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.flame">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.forest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.game_background2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.heart1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.intstructions">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.lock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.Main_page">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.playerD">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.playerL">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.playerR">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.playerU">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.rchest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.rocks">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FBLA_Game.My.Resources.Resources.torch">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:FBLA_Game.Forest">
+ <summary>
+ This is the game end form, it displays the scoreboard and leaderboard, and contains options to restart or quit program
+ </summary>
+</member>
+<member name="M:FBLA_Game.Forest.Forest_Load">
+ <summary>
+ On form load: update scoreboard(Lives remaining and time elapsed), 
+               store elapsTime(the Elapsed Time from current game) as string in strElapsTime variable,
+               add strElapsTime to arrPastTimes(list of past Elapsed Times),
+               convert objects in arrPastTimes from string to timespan and store in timeScores,
+               sort timeScores(list of timespans) in ascending order,
+               convert timeScores back to string and print in file(score.txt)
+               add converted timeScores to leaderboard(displayed listbox)               
+ </summary>
+</member>
+<member name="M:FBLA_Game.Forest.RestartButton_Click">
+ <summary>
+ if restartButton clicked restart program
+ </summary>
+</member>
+<member name="M:FBLA_Game.Forest.QuitButton_Click">
+ <summary>
+ if quitButton clicked end program
+ </summary>
+</member>
+<member name="T:FBLA_Game.instructions">
+ <summary>
+ This is the instructions page and it displays the user interface controls
+ </summary>
+</member>
+<member name="T:FBLA_Game.level1">
+ <summary>
+ This is the first level of the dungeon, escaping from here leads to the 2nd level
+ </summary>
+</member>
+<member name="M:FBLA_Game.level1.Level1_Load">
+ <summary>
+ On level1 form load, enable timer.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level1.Timer1_Tick">
+ <summary>
+ Constantly update scoreboard, and check if player is intersecting with stairs.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level1.Level1_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ On key press, checks if player is intersecting with any boundaries, if not, player is moved in a specified direction. If "o" key pressed 
+ and player is intersecting with boundaries of interactable objects, intersected object is "opened".
+ </summary>
+ <param name="e"> stores which key has been pressed </param>
+</member>
+<member name="T:FBLA_Game.level2">
+ <summary>
+ This is the second level of the dungeon, escaping from here leads to the 3rd level
+ </summary>
+</member>
+<member name="M:FBLA_Game.level2.Level3_Load">
+ <summary>
+ On level2 form load, enable timer.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level2.Timer1_Tick">
+ <summary>
+ constantly update scoreboard, and check if player is intersecting with stairs.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level2.Level3_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ On key press, checks if player is intersecting with any boundaries, if not, player is moved in a specified direction. If "o" key pressed 
+ and player is intersecting with boundaries of interactable objects, intersected object is "opened".
+ </summary>
+ <param name="e"> stores which key has been pressed </param>
+</member>
+<member name="T:FBLA_Game.level3">
+ <summary>
+ This is the third level of the dungeon, escaping from here stops the timer and leads to the game end form
+ </summary>
+</member>
+<member name="M:FBLA_Game.level3.Level3_Load">
+ <summary>
+ On level3 form load, enable timer.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level3.Timer1_Tick">
+ <summary>
+ Constantly update scoreboard, and check if player is intersecting with gate or secretGate.
+ </summary>
+</member>
+<member name="M:FBLA_Game.level3.Level3_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ On key press, checks if player is intersecting with any boundaries, if not, player is moved in a specified direction. If "o" key pressed 
+ and player is intersecting with boundaries of interactable objects, intersected object is "opened".
+ </summary>>
+ <param name="e"> stores which key has been pressed </param>
+</member>
+<member name="T:FBLA_Game.Main_form">
+ <summary>
+ This is main menu form it contains shortcuts to Level1 and the Instructions page and establishes public variables. 
+ </summary>>
+</member>
+<member name="M:FBLA_Game.Main_form.Main_form_Load">
+ <summuary>
+ On load, read the score.txt file and assign the initial lives and setup timer.
+ </summuary>
+</member>
+<member name="M:FBLA_Game.Main_form.Switchpanel(System.Windows.Forms.Form)">
+ <summary>
+ This switches the panel to display the specified form
+ </summary>
+ <param name="panel"> is the form which will be displayed on panel1 </param>
+</member>
+<member name="M:FBLA_Game.Main_form.Start_Click">
+ <summary>
+ When start button is clicked, switch the panel to display level1, which is the start of the game.
+ </summary>
+</member>
+<member name="M:FBLA_Game.Main_form.MainTimer_Tick">
+ <summary>
+ keeps track of elapsed time as public variable
+ </summary>
+</member>
+<member name="M:FBLA_Game.Main_form.InstructButton_Click">
+ <summary>
+ When instructions button is clicked, switch the panel to display instructions.
+ </summary>
+</member>
+</members>
+</doc>
