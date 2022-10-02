@@ -16,3 +16,5 @@ How to run program:
 
 You can find the documentation and class library file in:
 “FBLA Game-Escape the Dungeon” folder -> “Documentation” folder -> “Class Library.chm” or "Program documentation.docx"
+
+Video Presentation For NLC: https://youtu.be/nW3d8jEjwG0
